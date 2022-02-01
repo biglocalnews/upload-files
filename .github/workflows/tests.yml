@@ -1,0 +1,14 @@
+on: [push]
+
+jobs:
+  test-upload:
+    runs-on: ubuntu-latest
+    name: Test upload
+    steps:
+      - id: upload
+        uses: biglocalnews/upload-files@cad80b5b8018c7f77da3685a09ef4e67b1f6d6de
+        with:
+          api-key:
+          project-id:
+          files:
+            - tests/test.csv

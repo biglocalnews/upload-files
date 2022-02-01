@@ -8,6 +8,7 @@ def main():
     api_key = os.getenv("api-key")
     project_id = os.getenv("project-id")
     files = os.getenv("files")
+    print(f"Uploading {files}")
     client = Client(api_key)
     client.upload_files(project_id, files)
 

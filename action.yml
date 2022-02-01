@@ -1,5 +1,5 @@
 name: "Upload files to biglocalnews.org"
-description: "Automatically archive data with Big Local News"
+description: "Automatically archive your data with Big Local News"
 
 inputs:
   api-key:
@@ -36,4 +36,4 @@ runs:
       env:
           api-key: ${{ inputs.api-key }}
           project-id: ${{ inputs.project-id }}
-          files:  ${{ inputs.path }}
+          files: ${{ inputs.path }}
