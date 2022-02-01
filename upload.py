@@ -18,7 +18,7 @@ def main():
     # If the path is a directory ...
     if path.endswith("/"):
         # Get all the CSV files in the directory
-        file_list = glob.glob(path + "*.csv", recursive=True)
+        file_list = glob.glob(path + "**/*.csv", recursive=True)
 
         # Make sure we have at least one
         if not file_list:
