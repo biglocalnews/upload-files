@@ -1,4 +1,4 @@
-Upload files to biglocalnews.org in your GitHub Action
+Upload files to [biglocalnews.org](https://biglocalnews.org) in your GitHub Action
 
 ## Inputs
 
