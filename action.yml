@@ -1,6 +1,6 @@
 name: "Upload data to biglocalnews.org"
 author: 'Big Local News'
-description: "Automatically archive your data with Big Local News"
+description: "Automatically archive your comma-delimited files with Big Local News"
 
 branding:
   icon: 'upload-cloud'
