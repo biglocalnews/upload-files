@@ -1,14 +1,15 @@
-on: [push]
+on:
+  push:
+  workflow_dispatch:
 
 jobs:
-  test-upload:
+  test-upload-file:
     runs-on: ubuntu-latest
     name: Test upload
     steps:
       - id: upload
-        uses: biglocalnews/upload-files@cad80b5b8018c7f77da3685a09ef4e67b1f6d6de
+        uses: biglocalnews/upload-files@main
         with:
-          api-key:
-          project-id:
-          files:
-            - tests/test.csv
+          api-key: ${{ secrets.BLN_API_KEY }}
+          project-id: ${{ secrets.BLN_PROJECT_ID }}
+          files: tests/test.csv

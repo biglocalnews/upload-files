@@ -31,9 +31,9 @@ runs:
 
     - id: upload-files
       name: Upload files
-      run: python upload.py
+      run: python ${{ github.action_path }}/upload.py
       shell: bash
       env:
           api-key: ${{ inputs.api-key }}
           project-id: ${{ inputs.project-id }}
-          files: ${{ inputs.path }}
+          path: ${{ inputs.path }}

@@ -5,12 +5,21 @@ from bln.client import Client
 
 def main():
     """Upload the provided files to biglocalnews.org."""
+
+    # Get env variables
     api_key = os.getenv("api-key")
     project_id = os.getenv("project-id")
-    files = os.getenv("files")
-    print(f"Uploading {files}")
+    path = os.getenv("path")
+    print(f"Uploading {path}")
+
+    # Upload files
     client = Client(api_key)
-    client.upload_files(project_id, files)
+
+    if path.endswith("/"):
+        # Upload directory
+    else:
+        # Upload file
+        client.upload_file(project_id, files)
 
 
 if __name__ == '__main__':
