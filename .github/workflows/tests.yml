@@ -5,9 +5,9 @@ on:
   workflow_dispatch:
 
 jobs:
-  test-upload-file:
+  upload-file:
     runs-on: ubuntu-latest
-    name: Test upload
+    name: Upload file
     steps:
       - id: checkout
         name: Checkout
@@ -19,3 +19,18 @@ jobs:
           api-key: ${{ secrets.BLN_API_KEY }}
           project-id: ${{ secrets.BLN_PROJECT_ID }}
           path: tests/test.csv
+
+  upload-folder:
+    runs-on: ubuntu-latest
+    name: Upload folder
+    steps:
+      - id: checkout
+        name: Checkout
+        uses: actions/checkout@v2
+
+      - id: upload
+        uses: biglocalnews/upload-files@main
+        with:
+          api-key: ${{ secrets.BLN_API_KEY }}
+          project-id: ${{ secrets.BLN_PROJECT_ID }}
+          path: tests/
