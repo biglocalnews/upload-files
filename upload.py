@@ -27,6 +27,8 @@ def main():
         # Upload file
         if not path.lower().endswith("csv"):
             raise ValueError("Files must be CSVs")
+        if not path.startswith("/") and not path.startswith("."):
+            path = os.getcwd() + path
         if not os.path.exists(path):
             raise ValueError(f"File path does not exist {path}")
         print(f"Uploading {path}")
