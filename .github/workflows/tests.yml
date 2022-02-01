@@ -9,6 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     name: Test upload
     steps:
+      - id: checkout
+        name: Checkout
+        uses: actions/checkout@v2
+
       - id: upload
         uses: biglocalnews/upload-files@main
         with:

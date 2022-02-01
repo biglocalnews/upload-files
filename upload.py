@@ -35,11 +35,6 @@ def main():
         if not path.lower().endswith("csv"):
             raise ValueError("Files must be CSVs")
 
-        # If it's not an absolute path ..
-        if not path.startswith("/"):
-            # ... tack on the working directory
-            path = os.path.join(os.getcwd() + "/", path)
-
         # Make sure the path exists
         if not os.path.exists(path):
             raise ValueError(f"File path does not exist {path}")
