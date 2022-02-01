@@ -27,6 +27,8 @@ def main():
         # Upload file
         if not path.lower().endswith("csv"):
             raise ValueError("Files must be CSVs")
+        if not os.path.exists(path):
+            raise ValueError(f"File path does not exist {path}")
         print(f"Uploading {path}")
         client.upload_file(project_id, path)
 
