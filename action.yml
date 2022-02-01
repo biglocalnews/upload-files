@@ -1,5 +1,10 @@
 name: "Upload files to biglocalnews.org"
+author: 'Big Local News'
 description: "Automatically archive your data with Big Local News"
+
+branding:
+  icon: 'upload-cloud'
+  color: 'red'
 
 inputs:
   api-key:
