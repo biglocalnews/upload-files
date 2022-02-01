@@ -1,0 +1,39 @@
+name: "Upload files to biglocalnews.org"
+description: "Automatically archive data with Big Local News"
+
+inputs:
+  api-key:
+    description: |-
+      Your biglocalnews.org API key.
+    required: true
+  project-id:
+    description: |-
+      The identifier of the biglocalnews.org project where the files will be uploaded.
+    required: true
+  path:
+    description: |-
+      A list of file paths inside the action's filesystem to be uploaded.
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - id: setup-python
+      name: Setup Python
+      uses: actions/setup-python@v2
+      with:
+        python-version:  3.9
+
+    - id: install-deps
+      name: Install Python dependencies
+      run: pip install bln
+      shell: bash
+
+    - id: upload-files
+      name: Upload files
+      run: python upload.py
+      shell: bash
+      env:
+          api-key: ${{ inputs.api-key }}
+          project-id: ${{ inputs.project-id }}
+          files:  ${{ inputs.path }}
