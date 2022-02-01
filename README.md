@@ -2,7 +2,7 @@ Upload comma-delimited files to [biglocalnews.org](https://biglocalnews.org) in 
 
 ## Inputs
 
-* `api-key`: Your biglocalnews.org API key.
+* `api-key`: Your biglocalnews.org API token.
 * `project-id`: The identifier of the biglocalnews.org project where the files will be uploaded.
 * `path`: The file or folder path inside the action's filesystem to upload.
 
