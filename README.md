@@ -1,4 +1,4 @@
-Uploads files to biglocalnews.org in your GitHub Action
+Upload files to biglocalnews.org in your GitHub Action
 
 ## Inputs
 
