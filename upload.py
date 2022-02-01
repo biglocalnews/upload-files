@@ -18,16 +18,15 @@ def main():
     # If the path is a directory ...
     if path.endswith("/"):
         # Get all the CSV files in the directory
-        file_list = glob.glob(path + "*.csv")
+        file_list = glob.glob(path + "*.csv", recursive=True)
 
         # Make sure we have at least one
         if not file_list:
             raise ValueError("No CSV file found in directory.")
 
         # Upload the files
-        for f in file_list:
-            print(f"Uploading {f}")
-            client.upload_file(project_id, f)
+        print(f"Uploading {file_list}")
+        client.upload_files(project_id, file_list)
 
     # If a single file ...
     else:
