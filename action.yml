@@ -12,7 +12,7 @@ inputs:
     required: true
   path:
     description: |-
-      A list of file paths inside the action's filesystem to be uploaded.
+      The file or folder path inside the action's filesystem to upload.
     required: true
 
 runs:
