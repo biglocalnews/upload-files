@@ -9,7 +9,7 @@ branding:
 inputs:
   api-key:
     description: |-
-      Your biglocalnews.org API key.
+      Your biglocalnews.org API token.
     required: true
   project-id:
     description: |-
