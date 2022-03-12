@@ -18,11 +18,11 @@
     "default": {
         "bln": {
             "hashes": [
-                "sha256:2645685f929285e8503394696bbe5836767b2f7c48df7ff24f95b75d223d6bab",
-                "sha256:6cbe96166c245b059d7666b11efd2257b91758c9cc1a8da10cd6ac1c9d648239"
+                "sha256:0aaf843d1c883e18fb27c00bc6c358e7a32b506d22e9bff79ca8d4e17cc76242",
+                "sha256:8ed5ae828860d46f45d3fb7afad95cc672226a1b254dea00842c4a4f9ed302f9"
             ],
             "index": "pypi",
-            "version": "==1.0.2"
+            "version": "==1.0.3"
         },
         "certifi": {
             "hashes": [
@@ -33,11 +33,11 @@
         },
         "charset-normalizer": {
             "hashes": [
-                "sha256:2842d8f5e82a1f6aa437380934d5e1cd4fcf2003b06fed6940769c164a480a45",
-                "sha256:98398a9d69ee80548c762ba991a4728bfc3836768ed226b3945908d1a688371c"
+                "sha256:2857e29ff0d34db842cd7ca3230549d1a697f96ee6d3fb071cfa6c7393832597",
+                "sha256:6881edbebdb17b39b4eaaa821b438bf6eddffb4468cf344f09f89def34a8b1df"
             ],
             "markers": "python_version >= '3'",
-            "version": "==2.0.11"
+            "version": "==2.0.12"
         },
         "idna": {
             "hashes": [
