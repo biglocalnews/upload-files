@@ -1,7 +1,8 @@
 import glob
+import logging
 import os
 
-from bln.client import Client
+from bln import Client
 
 
 def main():
@@ -11,6 +12,13 @@ def main():
     api_key = os.getenv("api-key")
     project_id = os.getenv("project-id")
     path = os.getenv("path")
+
+    # Set the logger
+    logging.basicConfig(
+        level="DEBUG",
+        format="%(asctime)s - %(name)s - %(message)s"
+    )
+    logger = logging.getLogger(__name__)
 
     # Upload files
     client = Client(api_key)
@@ -25,7 +33,7 @@ def main():
             raise ValueError("No CSV file found in directory.")
 
         # Upload the files
-        print(f"Uploading {file_list}")
+        logger.debug(f"Uploading {len(file_list)} files")
         client.upload_files(project_id, file_list)
 
     # If a single file ...
@@ -39,7 +47,7 @@ def main():
             raise ValueError(f"File path does not exist {path}")
 
         # Upload the file
-        print(f"Uploading {path}")
+        logger.debug(f"Uploading {path}")
         client.upload_file(project_id, path)
 
 
