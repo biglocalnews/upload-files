@@ -21,7 +21,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Upload file to biglocalnews.org
-        uses: biglocalnews/upload-files@v1
+        uses: biglocalnews/upload-files@v2
         with:
           api-key: ${{ secrets.BLN_API_KEY }}
           project-id: ${{ secrets.BLN_PROJECT_ID }}
@@ -41,7 +41,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Upload folder to biglocalnews.org
-        uses: biglocalnews/upload-files@v1
+        uses: biglocalnews/upload-files@v2
         with:
           api-key: ${{ secrets.BLN_API_KEY }}
           project-id: ${{ secrets.BLN_PROJECT_ID }}
